@@ -14,7 +14,8 @@ def factorial(n : int) -> int:
     factorial(3) → 6
     """
 
-    return 1
+    if n==1:return 1
+    else: return n* factorial(n-1)
 
 def bunny_ears(bunnies : int) -> int:
 
@@ -27,7 +28,8 @@ def bunny_ears(bunnies : int) -> int:
     bunny_ears(2) → 4
     """
 
-    return 1
+    if bunnies==0: return 0
+    return 2* bunnies
 
 def fibonacci(n : int) -> int:
 
@@ -43,8 +45,9 @@ def fibonacci(n : int) -> int:
     fibonacci(1) → 1
     fibonacci(2) → 1
     """
-
-    return 1
+    if n==0: return 0
+    if n==1: return 1
+    return  fibonacci(n-1)+ fibonacci(n-2)
 
 def bunny_ears2(bunnies : int) -> int:
 
@@ -59,7 +62,10 @@ def bunny_ears2(bunnies : int) -> int:
     bunny_ears2(2) → 5
     """
 
-    return 1
+    if bunnies==0: return 0
+    #if bunnies==1: return 2
+    if bunnies%2 == 1: return bunny_ears2(bunnies-1) +2
+    if bunnies%2 == 0 : return bunny_ears2(bunnies-1)+3
 
 def triangle(rows : int) -> int:
 
@@ -72,8 +78,9 @@ def triangle(rows : int) -> int:
     triangle(1) → 1
     triangle(2) → 3
     """
-
-    return 1
+    if rows==0: return 0
+    if rows==1: return 1
+    return rows+triangle(rows-1)
 
 def sum_digits(n : int) -> int:
 
@@ -87,7 +94,8 @@ def sum_digits(n : int) -> int:
     sum_digits(12) → 3
     """
 
-    return 1
+    if n<10: return n
+    return (n%10)+ sum_digits(n//10)
 
 def count_7(n : int) -> int:
 
@@ -102,7 +110,9 @@ def count_7(n : int) -> int:
     count_7(123) → 0
     """
 
-    return 1
+    if n==7:return 1
+    elif n<10:return count_7(n//10)
+    elif(n%10)==7: 1 + count_7(n//10)
 
 def power_n(base : int, n : int) -> int:
 
@@ -114,8 +124,8 @@ def power_n(base : int, n : int) -> int:
     power_n(3, 2) → 9
     power_n(3, 3) → 27
     """
-
-    return 1
+    if n==1:return base
+    return base * power_n(base,n-1)
 
 def change_xy(s : str) -> str:
 
