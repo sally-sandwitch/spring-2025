@@ -1,0 +1,16 @@
+m= [[1.0, 2.0, 3.0],
+         [4.0, 5.0, 6.0]]
+n = [[1.0, 2.0, 3.0],
+         [4.0, 5.0, 6.0]]
+#def vsum(v:list[float],w:list[float]) ->list[float]:
+    #for i in range(len(v)):
+    #    v[i]+=w[i]
+    #return v
+
+def mproduct(m : list[list[float]], n : list[list[float]]) -> list[list[float]]:
+    prod = []
+    r = [0]*len(n[i])
+    for i in range(len(m)):
+        prod.append(r)
+
+    return prod
