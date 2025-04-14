@@ -1,4 +1,4 @@
-import assignments.pair.p2.graphics as g
+import assignments.pair.p1.graphics as g
          
 def main():
    l = -1
