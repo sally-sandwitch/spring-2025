@@ -60,8 +60,6 @@ def move_direction(x, y, direction, board, player):
 
     return dest_x, dest_y, None  # no error
 
-    return board
-
 def connected(board):
     #a function that check if the peices are 'connected'
     #not finished
